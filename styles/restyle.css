@@ -1,0 +1,184 @@
+:root {
+  --yith-wcan-filters_colors_titles: #434343;
+  --yith-wcan-filters_colors_background: #FFFFFF;
+  --yith-wcan-filters_colors_accent: #A7144C;
+  --yith-wcan-filters_colors_accent_r: 167;
+  --yith-wcan-filters_colors_accent_g: 20;
+  --yith-wcan-filters_colors_accent_b: 76;
+  --yith-wcan-color_swatches_border_radius: 100%;
+  --yith-wcan-color_swatches_size: 30px;
+  --yith-wcan-labels_style_background: #FFFFFF;
+  --yith-wcan-labels_style_background_hover: #A7144C;
+  --yith-wcan-labels_style_background_active: #A7144C;
+  --yith-wcan-labels_style_text: #434343;
+  --yith-wcan-labels_style_text_hover: #FFFFFF;
+  --yith-wcan-labels_style_text_active: #FFFFFF;
+  --yith-wcan-anchors_style_text: #434343;
+  --yith-wcan-anchors_style_text_hover: #A7144C;
+  --yith-wcan-anchors_style_text_active: #A7144C;
+  --hb-color-light: hsl(0, 0%, 100%);
+  --hb-color-dark: hsl(0, 0%, 26%);
+  --hb-color-dark-bg: hsl(0, 0%, 26%);
+  --hb-color-pripary: hsl(337, 79%, 37%);
+  --hb-color-pripary-bg: hsla(337, 79%, 37%, 0.3);
+  --hb-color-secondary: hsl(80, 60%, 48%);
+  --hb-color-secondary-bg: hsla(80, 60%, 48%, 0.3);
+  --hb-color-tertiary: hsl(24, 100%, 50%);
+  --hb-color-tertiary-bg: hsla(24, 100%, 50%, 0.3);
+  --linear: all 0.25s linear;
+  --shadow-dark: 1px 2px 5px rgba(27, 60, 112, 0.6);
+  --shadow-light: 1px 2px 5px rgba(255, 255, 255, 0.6);
+  --gap-lg: 90px;
+  --gap-md: 50px;
+  --gap-sm: 20px;
+  --gap-xsm: 10px;
+  --font-md: 22px;
+  --font-sm: 16px;
+}
+.__container {
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+.pt-2 {
+  padding-top: 20px;
+}
+.pb-2 {
+  padding-bottom: 20px;
+}
+.mt-2 {
+  margin-top: 20px;
+}
+.mb-2 {
+  margin-bottom: 20px;
+}
+.mt-3 {
+  margin-top: 30px;
+}
+.mb-3 {
+  margin-bottom: 30px;
+}
+.hb-button {
+  padding: 15px 30px;
+  border-radius: 15px;
+  color: var(--hb-color-light);
+  background: var(--hb-color-pripary);
+  transition: var(--linear);
+  position: relative;
+  font-size: var(--font-md);
+  display: table;
+}
+.hb-button_active {
+  background: var(--hb-color-secondary);
+}
+.hb-button_md {
+  padding: 10px 15px;
+}
+.hb-button:hover {
+  transform: translateY(2px);
+  color: var(--hb-color-light);
+  background: var(--hb-color-secondary);
+}
+.hb-heading {
+  position: relative;
+  width: fit-content;
+  padding-bottom: 13px;
+}
+.hb-heading_underline::after {
+  content: '';
+  width: 40%;
+  height: 3px;
+  position: absolute;
+  display: block;
+  bottom: 3px;
+  left: 0;
+  background-color: var(--hb-color-pripary);
+}
+.hb-index-hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.hb-index-hero::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  background-color: var(--hb-color-dark-bg);
+  opacity: 0.5;
+}
+.hb-index-hero__container {
+  padding-top: var(--gap-lg);
+  padding-bottom: var(--gap-lg);
+  color: var(--hb-color-light);
+  position: relative;
+  z-index: 2;
+}
+.hb-index-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  justify-content: center;
+  align-items: center;
+}
+.hb-index-hero__subtitle,
+.hb-index-hero__title {
+  color: inherit;
+  text-shadow: var(--shadow-dark);
+}
+.hb-index-hero__subtitle {
+  margin: 0;
+  font-size: var(--font-sm);
+}
+.hb-index-hero__title {
+  text-align: center;
+}
+.hb-index-hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+}
+.hb-index-category__img {
+  width: 100%;
+  max-width: 250px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  margin-bottom: var(--gap-sm);
+}
+.hb-index-category__title {
+  margin: var(--gap-sm) 0 0;
+  font-size: var(--font-sm);
+}
+.hb-index-category__price {
+  margin: var(--gap-xsm) 0;
+}
+.hb-index-category__heading {
+  margin: var(--gap-sm) 0;
+}
+.hb-index-category .hb-button {
+  font-size: var(--font-sm);
+}
+.hb-index-category .swiper-button-next,
+.hb-index-category .swiper-button-prev {
+  color: var(--hb-color-tertiary);
+}
+.hb-index-category .swiper-wrapper {
+  padding-bottom: var(--font-sm);
+}
+.hb-index-category .swiper-pagination {
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+}
+.hb-index-category .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--hb-color-tertiary);
+}
+/*# sourceMappingURL=restyle.css.map */
