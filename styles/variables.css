@@ -16,5 +16,24 @@
   --yith-wcan-anchors_style_text: #434343;
   --yith-wcan-anchors_style_text_hover: #A7144C;
   --yith-wcan-anchors_style_text_active: #A7144C;
+  --hb-color-light: hsl(0, 0%, 100%);
+  --hb-color-dark: hsl(0, 0%, 26%);
+  --hb-color-dark-bg: hsla(0, 0%, 26%, 0.5);
+  --hb-color-pripary: hsl(337, 79%, 37%);
+  --hb-color-pripary-bg: hsla(337, 79%, 37%, 0.3);
+  --hb-color-secondary: hsl(80, 60%, 48%);
+  --hb-color-secondary-bg: hsla(80, 60%, 48%, 0.3);
+  --hb-color-tertiary: hsl(24, 100%, 50%);
+  --hb-color-tertiary-bg: hsla(24, 100%, 50%, 0.3);
+  --linear: all 0.25s linear;
+  --shadow-dark: 1px 2px 5px rgba(27, 60, 112, 0.6);
+  --shadow-light: 1px 2px 5px rgba(255, 255, 255, 0.6);
+  --gap-lg: 90px;
+  --gap-md: 50px;
+  --gap-sm: 20px;
+  --gap-xsm: 10px;
+  --font-md: 22px;
+  --font-sm: 16px;
+  --lh: 150%;
 }
 /*# sourceMappingURL=variables.css.map */

@@ -18,7 +18,7 @@
   --yith-wcan-anchors_style_text_active: #A7144C;
   --hb-color-light: hsl(0, 0%, 100%);
   --hb-color-dark: hsl(0, 0%, 26%);
-  --hb-color-dark-bg: hsl(0, 0%, 26%);
+  --hb-color-dark-bg: hsla(0, 0%, 26%, 0.5);
   --hb-color-pripary: hsl(337, 79%, 37%);
   --hb-color-pripary-bg: hsla(337, 79%, 37%, 0.3);
   --hb-color-secondary: hsl(80, 60%, 48%);
@@ -34,6 +34,7 @@
   --gap-xsm: 10px;
   --font-md: 22px;
   --font-sm: 16px;
+  --lh: 150%;
 }
 .__container {
   width: 100%;
@@ -59,6 +60,21 @@
 }
 .mb-3 {
   margin-bottom: 30px;
+}
+.font-sm {
+  font-size: var(--font-sm);
+}
+.font-md {
+  font-size: 35px;
+}
+.color1 {
+  color: var(--hb-color-pripary);
+}
+.color2 {
+  color: var(--hb-color-secondary);
+}
+.color3 {
+  color: var(--hb-color-tertiary);
 }
 .hb-button {
   padding: 15px 30px;
@@ -111,7 +127,6 @@
   top: 0;
   left: 0;
   background-color: var(--hb-color-dark-bg);
-  opacity: 0.5;
 }
 .hb-index-hero__container {
   padding-top: var(--gap-lg);
@@ -143,6 +158,69 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap-sm);
+}
+@media (max-width: 550px) {
+  .hb-index-hero h1 {
+    font-size: 55px;
+  }
+}
+.hb-index-category-fw {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hb-index-category-fw__item {
+  flex: 1 1 33%;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.hb-index-category-fw__item:hover .hb-index-category-fw__slide-1 {
+  opacity: 0;
+}
+.hb-index-category-fw__item:hover .hb-index-category-fw__slide-2 {
+  opacity: 1 !important;
+}
+.hb-index-category-fw__slide-1 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--hb-color-dark-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hb-color-light);
+  transition: var(--linear);
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: var(--lh);
+  padding: var(--gap-sm);
+}
+.hb-index-category-fw__slide-2 {
+  background-color: var(--hb-color-dark-bg);
+  padding: var(--gap-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  height: 100%;
+  color: var(--hb-color-light);
+  opacity: 0;
+  transition: var(--linear);
+}
+.hb-index-category-fw__slide-2 h5 {
+  color: inherit;
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
+  line-height: var(--lh);
+}
+@media (max-width: 1126px) {
+  .hb-index-category-fw {
+    flex-direction: column;
+  }
 }
 .hb-index-category__img {
   width: 100%;
@@ -180,5 +258,162 @@
 }
 .hb-index-category .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--hb-color-tertiary);
+}
+.hb-index-products-list__img-link {
+  justify-self: center;
+  align-self: center;
+}
+.hb-index-products-list__img {
+  width: 100%;
+  max-width: 250px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center center;
+}
+.hb-index-products-list__grid {
+  display: grid;
+  gap: var(--gap-sm);
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 250px));
+  justify-content: center;
+}
+.hb-index-products-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--gap-xsm);
+}
+.hb-index-products-list .hb-button {
+  font-size: var(--font-sm);
+}
+@media (max-width: 660px) {
+  .hb-index-products-list__grid {
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 150px));
+  }
+  .hb-index-products-list__img {
+    max-width: 150px;
+    height: 150px;
+  }
+}
+.hb-index-reviews__more {
+  display: flex;
+  justify-content: flex-end;
+}
+.hb-index-reviews .swiper-slide-inner {
+  box-shadow: var(--shadow-dark);
+  padding: var(--gap-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xsm);
+}
+.hb-index-reviews .swiper-slide {
+  padding: 5px;
+}
+.hb-index-reviews__title,
+.hb-index-reviews__author {
+  margin: 0;
+  padding: 0;
+}
+.hb-index-reviews .hb-button {
+  font-size: var(--font-sm);
+}
+.hb-index-reviews .swiper-button-next,
+.hb-index-reviews .swiper-button-prev {
+  color: var(--hb-color-tertiary);
+}
+.hb-index-reviews .swiper-wrapper {
+  padding-bottom: var(--font-sm);
+}
+.hb-index-reviews .swiper-pagination {
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+}
+.hb-index-reviews .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--hb-color-tertiary);
+}
+.index-choose {
+  background-color: var(--hb-color-dark);
+  color: var(--hb-color-light);
+}
+.index-choose__container {
+  padding-top: var(--gap-md);
+  padding-bottom: var(--gap-md);
+  gap: var(--gap-sm);
+  display: flex;
+  flex-wrap: wrap;
+}
+.index-choose__item:not(.index-choose__item_img) {
+  flex: 0 1 500px;
+}
+.index-choose__item_img {
+  flex: 1 1 300px;
+}
+.index-choose__item_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+.index-choose__small {
+  font-size: 20px;
+  line-height: var(--lh);
+  font-weight: 500;
+  color: var(--hb-color-light);
+}
+.index-choose__heading {
+  margin: 0;
+  margin-bottom: var(--gap-sm);
+  margin-top: var(--gap-xsm);
+  color: var(--hb-color-secondary);
+}
+.index-choose__text {
+  margin: 0;
+  margin-bottom: var(--gap-md);
+}
+.index-choose .steps {
+  counter-reset: number;
+}
+.index-choose .steps .step {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  background-color: var(--hb-color-dark);
+}
+.index-choose .steps .step:not(:last-child) .text::before {
+  content: '';
+  width: 2px;
+  height: 50%;
+  transform: translateY(60%);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -48px;
+  background-color: var(--hb-color-secondary);
+}
+.index-choose .steps .count {
+  position: relative;
+  counter-increment: number;
+  background-color: var(--pink);
+  padding: var(--gap-xsm);
+  border-radius: 50%;
+  box-sizing: content-box;
+  outline: 15px solid var(--hb-color-secondary);
+}
+.index-choose .steps .count:before {
+  content: '0' counter(number);
+  color: var(--white);
+}
+.index-choose .steps .title {
+  margin-top: 0;
+  color: var(--hb-color-light);
+}
+.index-choose .steps .text {
+  position: relative;
+}
+@media (max-width: 900px) {
+  .index-choose__container {
+    justify-content: center;
+  }
 }
 /*# sourceMappingURL=restyle.css.map */
