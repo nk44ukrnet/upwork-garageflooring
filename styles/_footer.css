@@ -1,0 +1,15 @@
+.hb-footer-restyle {
+  background-color: var(--bh-color-dark-solid);
+  color: var(--hb-color-light);
+}
+.hb-footer-restyle__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hb-footer-restyle__logo img {
+  padding: var(--gap-xsm);
+  border-radius: var(--gap-xsm);
+  background-color: var(--hb-color-light);
+}
+/*# sourceMappingURL=_footer.css.map */
